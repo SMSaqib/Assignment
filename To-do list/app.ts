@@ -1,55 +1,63 @@
 #!/usr/bin/env node
-
-//npm init -y for crerating project
-// tsc -w watch window
-//tsc --init (for ts.configutaion) 
-
 import inquirer from "inquirer";
-import {Sum,diff,Mul,div} from "./functions.js"
-console.log("Calculator App");
-let answer = await inquirer.prompt([
-  {
-    message: "Enter your first number",
-    type: "number",
-    name: "num1",
-  },
-  {
-    message: "Enter your second number",
-    type: "number",
-    name: "num2",
-  },
-  {
-    message: "Select operator",
-    type: "list",
-    choices: ["+", "-", "*", "/"],
-    name: "operator",
-  },
-]);
+import {task_list,confirmation, removal,cont,activity_re,activity,Removal_confirm_afteraddition} from "./functions.js"
+console.log("To-do App | Plan your Day to Day Activity");
+let removalconfirmationafteraddition:string
+let continiuty:string 
+let d = await confirmation()
+console.log(d.conf)
+switch (<string> d.conf) {
+  case "Please Add your Activity":
+    do {
+      let answer = await inquirer.prompt([
+      {
+        message: "Please Enter your activity",
+        type: "string",
+        name: "act",
+      },
+    ]);  
+    activity(answer.act)
+    console.log(task_list)
 
-let num1 = answer.num1 as number;
-let num2 = answer.num2 as number;
-let operator = answer.operator as string;
+    continiuty= await cont()
+   console.log(task_list)
 
+    } while(continiuty =="Yes");
+    if (continiuty =="No"){
+      // return {remov_conf: Removal_confirm_afteraddition.remov_conf}
+    do {
+      removalconfirmationafteraddition =await  Removal_confirm_afteraddition()
+      if(removalconfirmationafteraddition=="Yes"){
+      let x =await  removal()  
+      activity_re(x.indNo,x.Rec_No)
+     //   result = num1 - num2;
+      console.log(task_list)
+      console.log("you have suucessfully removed the task from the list") 
+    //  continiuty= await cont()
+     console.log(task_list)}
+     else
+    break
+    }while( removalconfirmationafteraddition =="Yes")
 
-let result: number = 0;
-
-switch (operator) {
-  case "+":
-    result = num1 + num2;
+  }
+//    result = num1 + num2;
     break;
-  case "-":
-    result = num1 - num2;
-    break;
-  case "*":
-    result = num1 * num2;
-    break;
-  case "/":
-    result = num1 / num2;
-    break;
-  default:
-    console.log("Invalid operator");
+//   case "Do you want to remove Activity?":
+//   do {
+//   let x =await  removal()  
+//   activity_re(x.indNo,x.Rec_No)
+//  //   result = num1 - num2;
+//  console.log(task_list)
+//  console.log("you have suucessfully removed the task from the list") 
+//  continiuty= await cont()
+//    console.log(task_list)
+//   } while(continiuty =="Yes")
+//   break;
+   default:
+    console.log(task_list)
+    console.log("you have successfuly log Out");
 }
 
-console.log(`Result: ${num1} ${operator} ${num2} = ${result}`);
+//console.log(`Result: ${num1} ${operator} ${num2} = ${result}`);
 
 
