@@ -94,12 +94,13 @@ async function gettrnx_detail(IDcustomer) {
             else {
                 // Resolve the promise with the rows
                 resolve(rows);
+                console.table(rows);
                 // Print the records in tabular form
-                console.log("|      ID         |   Trnx Typ   | custmr_Id | trnx_Amount | trnx_nature | Trnx_date |----|");
-                console.log("|-----------------|--------------|-----------|-------------|-------------|-----------|----|");
-                rows.forEach((row) => {
-                    console.log(`| ${row.trnx_id} | ${row.trnx_type} | ${row.custmr_Id} |  ${row.trnx_Amount}  |${row.trnx_nature} |${row.Trnx_date} | ... |`);
-                });
+                // console.table("|      ID         |   Trnx Typ   | custmr_Id | trnx_Amount | trnx_nature | Trnx_date |----|");
+                // console.log("|-----------------|--------------|-----------|-------------|-------------|-----------|----|");
+                // rows.forEach((row) => {
+                //   console.log(`| ${row.trnx_id} | ${row.trnx_type} | ${row.custmr_Id} |  ${row.trnx_Amount}  |${row.trnx_nature} |${row.Trnx_date} | ... |`);
+                // });
             }
             db.close();
         });

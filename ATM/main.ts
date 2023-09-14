@@ -52,7 +52,7 @@ trnx_Amount=1000000
 trnx_nature="Credit"
 comp_ref =""
 Acc_ref=""
-Trnx_date = dateo()//new Date()//new Date(Date.now().toLocaleString("YYYY-MM-DD HH:MM:SS"))
+Trnx_date = dateo() as unknown as Date//new Date()//new Date(Date.now().toLocaleString("YYYY-MM-DD HH:MM:SS"))
  
 //trnx_id: string, trnx_type: string, custmr_Id: number, trnx_Amount: number, trnx_nature: string, Trnx_date: Date, comp_ref: string, Acc_Ref: string): Promise<void>
 await trnx_punch(trnx_id,trnx_type,custmr_Id,trnx_Amount,trnx_nature,Trnx_date,comp_ref,Acc_ref)
@@ -113,7 +113,7 @@ if(pinrecordcount>0){
           trnx_nature="Debit"
           comp_ref =<string>""
           Acc_ref=<string>ft.trnx
-          Trnx_date = dateo()//new Date(Date.now().toLocaleString("YYYY-MM-DD HH:MM:SS"))          Trnx_date = new Date(Date.now().toLocaleString("YYYY-MM-DD HH:MM:SS"))
+          Trnx_date = dateo() as unknown as Date //new Date(Date.now().toLocaleString("YYYY-MM-DD HH:MM:SS"))          Trnx_date = new Date(Date.now().toLocaleString("YYYY-MM-DD HH:MM:SS"))
 
          //trnx_id: string, trnx_type: string, custmr_Id: number, trnx_Amount: number, trnx_nature: string, Trnx_date: Date, comp_ref: string, Acc_Ref: string): Promise<void>
           let fundtransfer =  await trnx_punch(trnx_id,trnx_type,custmr_Id,trnx_Amount,trnx_nature,Trnx_date,comp_ref,Acc_ref)
@@ -133,7 +133,7 @@ if(pinrecordcount>0){
           trnx_nature="Debit"
           comp_ref =<string>""
           Acc_ref=<string>bp.customer
-          Trnx_date = dateo()//new Date(Date.now().toLocaleString("YYYY-MM-DD HH:MM:SS"))          Trnx_date = new Date(Date.now().toLocaleString("YYYY-MM-DD HH:MM:SS"))
+          Trnx_date = dateo() as unknown as Date//new Date(Date.now().toLocaleString("YYYY-MM-DD HH:MM:SS"))          Trnx_date = new Date(Date.now().toLocaleString("YYYY-MM-DD HH:MM:SS"))
 
          //trnx_id: string, trnx_type: string, custmr_Id: number, trnx_Amount: number, trnx_nature: string, Trnx_date: Date, comp_ref: string, Acc_Ref: string): Promise<void>
           let fundtransfer =  await trnx_punch(trnx_id,trnx_type,custmr_Id,trnx_Amount,trnx_nature,Trnx_date,comp_ref,Acc_ref)

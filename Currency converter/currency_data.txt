@@ -1,0 +1,54 @@
+Currency	Symbol	Value
+Kuwaiti Dinar	KWD	0.308728
+Bahraini Dinar	BHD	0.376
+Omani Rial	OMR	0.384761
+British Pound	GBP	0.801882
+Swiss Franc	CHF	0.892556
+Euro	EUR	0.931732
+United State Dollar	USD	1
+Canadian Dollar	CAD	1.355906
+Bruneian Dollar	BND	1.361427
+Singapore Dollar	SGD	1.361427
+Australian Dollar	AUD	1.559618
+New Zealand Dollar	NZD	1.69381
+Bulgarian Lev	BGN	1.822308
+Qatari Riyal	QAR	3.64
+Emirati Dirham	AED	3.6725
+Saudi Arabian Riyal	SAR	3.75
+Israeli Shekel	ILS	3.81771
+Polish Zloty	PLN	4.309211
+Romanian New Leu	RON	4.629918
+Malaysian Ringgit	MYR	4.679982
+Libyan Dinar	LYD	4.829969
+Brazilian Real	BRL	4.947666
+Trinidadian Dollar	TTD	6.769934
+Danish Krone	DKK	6.951271
+Chinese Yuan Renminbi	CNY	7.283828
+Hong Kong Dollar	HKD	7.826324
+Norwegian Krone	NOK	10.688385
+Swedish Krona	SEK	11.120039
+Botswana Pula	BWP	13.623909
+Mexican Peso	MXN	17.254678
+South African Rand	ZAR	18.934803
+Czech Koruna	CZK	22.795934
+Turkish Lira	TRY	26.930814
+Taiwan New Dollar	TWD	31.978814
+Thai Baht	THB	35.752586
+Mauritian Rupee	MUR	44.789872
+Philippine Peso	PHP	56.792295
+Indian Rupee	INR	82.947269
+Russian Ruble	RUB	95.933877
+Nepalese Rupee	NPR	132.777841
+Icelandic Krona	ISK	133.894284
+Japanese Yen	JPY	147.336608
+Pakistani Rupee	PKR	298.982443
+Sri Lankan Rupee	LKR	322.848613
+Argentine Peso	ARS	349.981713
+Hungarian Forint	HUF	358.177695
+Kazakhstani Tenge	KZT	465.26748
+Chilean Peso	CLP	892.618619
+South Korean Won	KRW	1329.371483
+Colombian Peso	COP	3983.24914
+Indonesian Rupiah	IDR	15380.93376
+Iranian Rial	IRR	42354.14197
+Venezuelan Bolivar	VES	3329577.093
