@@ -109,7 +109,7 @@ async function blancequery(id: number) {
 async function gettrnx_detail(IDcustomer: number) {
   return new Promise((resolve, reject) => {
     let db = new sqlite3.Database('user_db.db');
-    db.all(`SELECT * FROM Log_Trnx where custmr_id = ?`, [IDcustomer], (err, rows):void => {
+    db.all(`SELECT * FROM Log_Trnx where custmr_id = ?`, [IDcustomer], (err, rows) => {
       if (err) {
         reject(err);
       } else {

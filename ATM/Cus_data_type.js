@@ -15,6 +15,7 @@ async function Transaction_list() {
 }
 // Account number required for Fund transfer Transaction
 async function FT_Account_Number() {
+    // let balance = await blancequery(1 || 0)
     let FT = await inquirer.prompt([
         {
             type: 'input',

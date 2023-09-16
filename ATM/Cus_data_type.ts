@@ -1,9 +1,11 @@
 //custom data type object : User
 import chalk, { Chalk } from "Chalk";
-import {getCount,db} from "./db.js"
+import {getCount,db, blancequery} from "./db.js"
 import inquirer from "inquirer";
-
+//import {custmr_Id} from "./main.js"
 //let userData: User;
+ //custmr_Id=1;
+
 
 interface User {
   id: number;
@@ -32,6 +34,7 @@ return FT.trnx
 }
 // Account number required for Fund transfer Transaction
 async function FT_Account_Number() { 
+  // let balance = await blancequery(1 || 0)
   let FT= await inquirer.prompt([
   {
       type: 'input',
@@ -52,7 +55,7 @@ async function FT_Account_Number() {
       message: `Enter Amount: your limit is 1 Lac per day `,
       validate: (y:string) => {
         let regex = /^[0-9]{4,5}$/;          
-        if (regex.test(y) && y.length>=3 && y.length<=6 && Number(y) >= 5000 && Number(y) <= 100000){
+        if (regex.test(y) && y.length>=3 && y.length<=6 && Number(y) >= 5000 && Number(y) <= 100000 ){
           return true;
          }else {
           return 'Please enter valid amount minimum 5,000 Rs/- and maximum 100,000 Rs/-.';
